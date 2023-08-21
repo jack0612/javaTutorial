@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
@@ -23,6 +24,7 @@ import com.pokemonreview.api.Jpa.Query.JoinQueryService;
 //The default value is embedded,
 //meaning it will only execute for an embedded database (i.e. in our tests). If we set it to always, it will always execute.
 @SpringBootApplication
+@EnableDiscoveryClient
 public class ApiApplication implements CommandLineRunner{
 
 	Logger logger = LoggerFactory.getLogger(ApiApplication.class);

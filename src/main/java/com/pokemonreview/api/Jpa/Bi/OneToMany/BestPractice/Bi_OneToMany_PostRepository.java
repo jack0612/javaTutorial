@@ -10,4 +10,7 @@ public   interface Bi_OneToMany_PostRepository extends JpaRepository<Bi_OneToMan
 	
 	@Query("SELECT   e FROM Bi_OneToMany_Post e JOIN FETCH e.comments ")
 	List<Bi_OneToMany_Post> findAllPostAndComments();
+	
+//	@Query(value="SELECT  * FROM Products where price < :maxPrice", nativeQuery=true)
+//	List<Product> getProductWithMaxPrice(Integer maxPrice);
 }

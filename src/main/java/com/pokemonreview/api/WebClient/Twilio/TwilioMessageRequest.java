@@ -1,4 +1,4 @@
-package com.pokemonreview.api.WebClient;
+package com.pokemonreview.api.WebClient.Twilio;
 
 import lombok.Data;
 

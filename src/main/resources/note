@@ -34,6 +34,7 @@ http://localhost:8083/swagger-ui/index.html
 	@WebMvcTest 
 	annotation to fire up an application context that contains only the beans needed for testing 
 	a web controller:
+	@AutoConfigureMocMvc
 	
 	 UserResource user = new UserResource("Zaphod", "zaphod@galaxy.net");
   
@@ -48,4 +49,7 @@ oauth2Login() will authenticate the user with OAuth2 (or OIDC), populating Sprin
  from either the JWT or the userInfo endpoint. 
  oauth2Client() won't authenticate the user but will seek permission from the OAuth2 authorization server for the resources 
  (scopes) it needs to access. With oauth2Client() you'll still need to authenticate the user, for example via formLogin().
+ 
+ 8 	Mockito: @Mock and @InjectMocks
+ 	SpringBoot support: @MockBean and @Autowired
 	  
